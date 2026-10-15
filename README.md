@@ -41,3 +41,10 @@ it. If you need a different convention, wrap `search` before calling it.
 Overlapping matches are reported independently: searching `"aaaa"` for `"aa"`
 returns `[0, 1, 2]`, not `[0, 2]`. This is the natural single-pattern reading;
 pair it with a filter if you need non-overlapping spans.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
