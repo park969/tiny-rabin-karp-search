@@ -1,6 +1,6 @@
 {
   "name": "tiny-rabin-karp-search",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Rabin-Karp string search that verifies each hash match character-by-character to eliminate false positives.",
   "type": "module",
   "main": "src/index.js",
